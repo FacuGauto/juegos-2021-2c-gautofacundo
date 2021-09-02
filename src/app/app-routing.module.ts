@@ -1,9 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ErrorComponent } from './page/error/error.component';
 import { HomeComponent } from './page/home/home.component';
+import { LoginComponent } from './page/login/login.component';
 
 const routes: Routes = [
-  {path:'home',component:HomeComponent}
+  {path:'',redirectTo: 'home', pathMatch: 'full'},
+  {path:'home',component:HomeComponent},
+  {path:'login',component:LoginComponent},
+  {path:'casa',component:HomeComponent},
+  {path:'**', component: ErrorComponent}
 ];
 
 @NgModule({
