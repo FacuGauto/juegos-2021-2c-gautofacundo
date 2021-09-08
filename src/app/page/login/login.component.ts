@@ -15,7 +15,14 @@ export class LoginComponent implements OnInit {
 
   siguiente(){
     console.log('Siguiente');
-    this.rutas.navigate(['home']);
+    /*var modelo = this;
+    
+    setTimeout(function(){
+      modelo.rutas.navigate(['home']);
+    }, 2000);*/
+    setTimeout(() =>{
+      this.rutas.navigate(['home']);
+    }, 2000);
   }
 
 
